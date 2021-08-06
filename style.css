@@ -1,0 +1,303 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("img/wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* 로딩창 */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.animate-bottom {
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@keyframes animatebottom {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#loadDiv {
+    display: none;
+    text-align: center;
+}
+
+/*메뉴 전체 css*/
+.top {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.452);
+
+}
+
+.navitem {
+    display: flex;
+    align-items: center;
+}
+
+/*왼쪽메뉴*/
+.apple {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.appleicon {
+    cursor: pointer;
+    margin-left: 25px;
+    margin-right: 30px;
+}
+
+.finder {
+    cursor: pointer;
+    font-size: small;
+    font-weight: 900;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.leftText {
+    cursor: pointer;
+    font-size: small;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 오른쪽메뉴 */
+
+.videoIcon {
+    cursor: pointer;
+    margin-top: 3px;
+    width: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.batterytext {
+    font-size: xx-small;
+    font-weight: 500;
+    margin-left: 7px;
+    
+
+}
+
+.batteryIcon {
+    cursor: pointer;
+    margin-top: 3px;
+    width: 15px;
+    margin-left: 3px;
+    margin-right: 7px;
+}
+
+.wifiIcon {
+    cursor: pointer;
+    margin-top: 2px;
+    width: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.searchIcon {
+    cursor: pointer;
+    margin-top: 3px;
+    width: 12px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.ccIcon {
+    cursor: pointer;
+    margin-top: 3px;
+    width: 13px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.siri {
+    cursor: pointer;
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    margin-left: 7px;
+}
+
+.dateTime {
+    cursor: pointer;
+    font-size: small;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+/* 윈도우창 */
+/* 윈도우 창 헤더부분 */
+.post-container {
+
+    left: 25.9vh;
+    top: 8.5vh;
+    opacity: .98;
+    width: 75%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: -3px 17px 23px 1px rgb(0 0 0 /58%);
+    z-index: 100;
+}
+
+#mypost {
+    position: absolute;
+}
+
+#mypostheader {
+    cursor: pointer;
+}
+
+.post-top {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    background-color: #eae5e5;
+    width: 73.9%;
+    height: 3rem;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    z-index: 2;
+}
+
+.TopButton {
+    width: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.TopButton span {
+    cursor: pointer;
+}
+
+.button-red,
+.button-yellow {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+
+.button-red {
+    background-color: #fb4646;
+}
+
+.button-yellow {
+    background-color: #fcaf25;
+}
+
+.button-green {
+    display: inline-block;
+    background-color: #29c333;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* 윈도우 창 내용 */
+.post-content {
+    padding: 3rem;
+    margin: 2rem;
+    height: 80%;
+    font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, inter, NanumSquare, Segoe UI, Sans-Serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    overflow-y: scroll;
+}
+
+
+/* 독 메뉴 */
+
+.dock-content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    right: 0;
+    height: 50px;
+    width: max-content;
+    border-radius: 13px;
+    background-color: rgba(255, 255, 255, 0.452);
+    box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.5);
+    padding-left: 5px;
+    padding-right: 5px;
+    z-index: 9997;
+}
+
+.dockIcon {
+    margin-top: 5px;
+    width: 40px;
+    transition: ease-out 0.3s;
+    cursor: pointer;
+}
+
+.hrLine {
+    background-color: rgba(0, 0, 0, 0.288);
+    height: 35px;
+    width: 1px;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* 독메뉴 호버 */
+
+.dock:hover {
+    width: max-content;
+}
+
+.dockIcon:hover {
+    margin-top: -60px;
+    width: 100px;
+}
+
+/* .bounce {
+    animation: bounce 0.4s 4 alternate ease-out;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+} */
