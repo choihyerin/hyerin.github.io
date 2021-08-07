@@ -79,6 +79,7 @@ function dragElement(elmnt) {
         document.onmousemove = null;
     }
 }
+
 //로딩 창
 
 let myVar;
@@ -95,27 +96,22 @@ function showPage() {
 
 // 독 아이콘 클릭시 포스트 열림 
 $('.dockIcon').on('click', () => {
-    if ($('#content').hasClass('minimize-post')) {
-        $('#content').removeClass('minimize-post')
-        $('.post-container').css({
-            'transition': 'opacity 300ms ease-out,box-shadow 150ms ease-out 400ms',
-            'box-shadow': '9px 9px 24px rgba(0, 0, 0, .3)'
-        })
-        $('.post-top').removeClass('minimize-post-header')
-
-    } else {
-        if (!$('#content').hasClass('close-post')) {
-            $('.post-container').css({
-                animation: 'terminalShake 600ms ease-out'
-            })
-            setTimeout(() => {
-                $('.post-container,.post-top').css({
-                    animation: 'none'
+            if (!$('#content').hasClass('close-post')) {
+                // 만약 포스트가 열려있는데 독 아이콘이 눌릴경우 창 흔들림
+                $('.post-container').css({
+                    animation: 'postShake 600ms ease-out'
                 })
-            }, 600)
-        } else {
-            $('.active-icon').css('opacity', '1')
-            $('#content,.post-container,.post-top').removeClass('close-post')
-        }
-    }
-})
+                setTimeout(() => {
+                    $('.post-container,.post-top').css({
+                        animation: 'none'
+                    })
+                }, 600)
+            } else {
+                $('#content,.post-container,.post-top').removeClass('close-post')
+            }
+        })
+
+        // 포스트 닫기 버튼 
+        $('.button-red').on('click', () => {
+            $('#content, .post-container, .post-top').addClass('close-post')
+        })
