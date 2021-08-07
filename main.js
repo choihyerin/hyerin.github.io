@@ -1,5 +1,17 @@
 // 처음 로딩시 post 창닫힘 상태로 만들기 
 $('#content, .post-container, .post-top').addClass('close-post')
+//로딩 창
+
+let myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loadDiv").style.display = "block";
+}
 
 // 시간 불러오기
 function showDateTime() {
@@ -58,6 +70,7 @@ function dragElement(elmnt) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
+
         document.onmousemove = elementDrag;
     }
 
@@ -75,43 +88,35 @@ function dragElement(elmnt) {
     }
 
     function closeDragElement() {
+
         document.onmouseup = null;
         document.onmousemove = null;
     }
-}
 
-//로딩 창
-
-let myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("loadDiv").style.display = "block";
 }
 
 
+
+
+// 독에서 창 열기
 // 독 아이콘 클릭시 포스트 열림 
 $('.dockIcon').on('click', () => {
-            if (!$('#content').hasClass('close-post')) {
-                // 만약 포스트가 열려있는데 독 아이콘이 눌릴경우 창 흔들림
-                $('.post-container').css({
-                    animation: 'postShake 600ms ease-out'
-                })
-                setTimeout(() => {
-                    $('.post-container,.post-top').css({
-                        animation: 'none'
-                    })
-                }, 600)
-            } else {
-                $('#content,.post-container,.post-top').removeClass('close-post')
-            }
+    if (!$('#content').hasClass('close-post')) {
+        // 만약 포스트가 열려있는데 독 아이콘이 눌릴경우 창 흔들림
+        $('.post-container').css({
+            animation: 'postShake 600ms ease-out'
         })
+        setTimeout(() => {
+            $('.post-container,.post-top').css({
+                animation: 'none'
+            })
+        }, 600)
+    } else {
+        $('#content,.post-container,.post-top').removeClass('close-post')
+    }
+})
 
-        // 포스트 닫기 버튼 
-        $('.button-red').on('click', () => {
-            $('#content, .post-container, .post-top').addClass('close-post')
-        })
+// 포스트 닫기 버튼 
+$('.button-red').on('click', () => {
+    $('#content, .post-container, .post-top').addClass('close-post')
+})
