@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hyerin</title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
@@ -28,7 +29,8 @@
         </div>
     </div>
     <div style="display:none;" id="loadDiv" class="animate-bottom">
-        <!-- 메뉴 -->
+
+        <!-- 위에 메뉴 -->
         <div class="top">
             <!-- 왼쪽 메뉴 -->
             <div class="navitem">
@@ -71,8 +73,9 @@
             </div>
         </div>
 
-        <!-- ibook -->
+        <!-- 포스트 창 -->
         <div class="post-container" id="mypost">
+            <!-- 포스트 제목 -->
             <div class="post-top" id="mypostheader">
                 <div class="TopButton">
                     <span class="button-red"></span>
@@ -80,6 +83,7 @@
                     <span class="button-green"></span>
                 </div>
             </div>
+            <!-- 포스트 내용 -->
             <div id="content">
                 <div class="post-content">
                     <div class="sodyd">hihihih
@@ -88,7 +92,7 @@
             </div>
         </div>
 
-        <!-- dock -->
+        <!-- 독 메뉴 바 -->
         <div class="dock">
             <div class="dock-content">
                 <div class="dock-icon"><img class="dockIcon" src="img/finder.png"></div>
@@ -101,7 +105,7 @@
                 <div class="dock-icon"><img class="dockIcon" src="img/mail.png"></div>
                 <div class="dock-icon"><img class="dockIcon" src="img/setting.png"></div>
                 <div class="dock-icon"><img class="dockIcon" src="img/music.png"></div>
-                <div class="dock-icon" id="dock_ibook"><img class="dockIcon" src="img/ibook.png">
+                <div class="dock-icon" ><img class="dockIcon dock_ibook" src="img/ibook.png">
                     <div class="active-icon"></div>
                 </div>
                 <div class="hrLine"></div>

@@ -1,3 +1,6 @@
+// 처음 로딩시 post 창닫힘 상태로 만들기 
+$('#content, .post-container, .post-top').addClass('close-post')
+
 // 시간 불러오기
 function showDateTime() {
     let date = new Date();
@@ -75,10 +78,7 @@ function dragElement(elmnt) {
         document.onmouseup = null;
         document.onmousemove = null;
     }
-
 }
-
-
 //로딩 창
 
 let myVar;
@@ -91,3 +91,31 @@ function showPage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loadDiv").style.display = "block";
 }
+
+
+// 독 아이콘 클릭시 포스트 열림 
+$('.dockIcon').on('click', () => {
+    if ($('#content').hasClass('minimize-post')) {
+        $('#content').removeClass('minimize-post')
+        $('.post-container').css({
+            'transition': 'opacity 300ms ease-out,box-shadow 150ms ease-out 400ms',
+            'box-shadow': '9px 9px 24px rgba(0, 0, 0, .3)'
+        })
+        $('.post-top').removeClass('minimize-post-header')
+
+    } else {
+        if (!$('#content').hasClass('close-post')) {
+            $('.post-container').css({
+                animation: 'terminalShake 600ms ease-out'
+            })
+            setTimeout(() => {
+                $('.post-container,.post-top').css({
+                    animation: 'none'
+                })
+            }, 600)
+        } else {
+            $('.active-icon').css('opacity', '1')
+            $('#content,.post-container,.post-top').removeClass('close-post')
+        }
+    }
+})

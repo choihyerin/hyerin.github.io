@@ -290,8 +290,13 @@ body {
     height: 80%;
     font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, inter, NanumSquare, Segoe UI, Sans-Serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     overflow-y: scroll;
+    
 }
 
+.close-post{
+    opacity:0;
+    pointer-events:none;
+}
 
 /* 독 메뉴 */
 
@@ -340,17 +345,3 @@ body {
     width: 100px;
 }
 
-/* .bounce {
-    animation: bounce 0.4s 4 alternate ease-out;
-
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-20px);
-    }
-} */
