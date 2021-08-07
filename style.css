@@ -11,28 +11,79 @@ body {
 }
 
 /* 로딩창 */
+
 #loader {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    animation: spin 2s linear infinite;
+    flex-direction: column;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.loading-logo-color {
+    fill: #D8D8D8;
 }
+
+.loading-logo-bar-wrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-logo {
+    width: 80px;
+}
+
+.loading-bar {
+    width: 180px;
+    height: 6px;
+    margin-top: 60px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.loading-bar-thumb {
+    background: #D8D8D8;
+    border-radius: 18px;
+    height: 100%;
+    animation: loadingBar 3s ease-out forwards;
+}
+
+@keyframes loadingBar {
+    0% {
+        width: 0;
+    }
+
+    20%,
+    25% {
+        width: 20%;
+    }
+
+    36% {
+        width: 25%;
+    }
+
+    40% {
+        width: 32%;
+    }
+
+    80%,
+    85% {
+        width: 80%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+
+}
+
 .animate-bottom {
     animation-name: animatebottom;
     animation-duration: 1s
@@ -40,10 +91,12 @@ body {
 
 @keyframes animatebottom {
     from {
+
         opacity: 0
     }
 
     to {
+
         opacity: 1
     }
 }
@@ -108,7 +161,7 @@ body {
     font-size: xx-small;
     font-weight: 500;
     margin-left: 7px;
-    
+
 
 }
 
