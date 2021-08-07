@@ -100,7 +100,7 @@ function dragElement(elmnt) {
 
 // 독에서 창 열기
 // 독 아이콘 클릭시 포스트 열림 
-$('.dockIcon').on('click', () => {
+$('#dock_ibook').on('click', () => {
     if (!$('#content').hasClass('close-post')) {
         // 만약 포스트가 열려있는데 독 아이콘이 눌릴경우 창 흔들림
         $('.post-container').css({
