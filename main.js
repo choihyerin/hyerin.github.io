@@ -47,6 +47,53 @@ function showDateTime() {
 }
 setInterval(showDateTime, 1);
 
+//서브 네비바 내리고 하이라이터 해주는 js
+
+function tophighlight(target) {
+    if (target.hasClass('option')) {
+        target.css({
+            'background-color': 'rgba(255, 255, 255, 0.452)',
+            'color': 'white'
+        });
+    }
+    $('#nav').addClass('active');
+    target.addClass('active');
+    target.addClass('opened');
+    target.find('.sub-menu').css('display', 'block')
+}
+
+function removehighlight() {
+    $('.option').css({
+        'background-color': 'transparent',
+        'color': 'black'
+    });
+    $('.option').find('.sub-menu').css('display', 'none')
+    $('.option').removeClass('active');
+    $('.option').removeClass('opened');
+}
+
+function intopNav() {
+    removehighlight();
+    $('#nav').removeClass('active');
+    $('option').removeClass('active');
+}
+
+$(document).on('click', (e) => {
+    if (!$(e.target).hasClass('option')) {
+        intopNav();
+    }
+})
+
+$('.option').on('click', (e) => {
+    if ($(e.target).hasClass('option') && $(e.target).hasClass('active')) {
+        intopNav();
+    } else {
+        removehighlight();
+        tophighlight($(e.target));
+    }
+})
+
+
 // 창 움직일수있게 하기
 dragElement(document.getElementById("mypost"));
 

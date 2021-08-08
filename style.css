@@ -134,23 +134,72 @@ body {
 .finder {
     cursor: pointer;
     font-size: small;
-    font-weight: 900;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-weight: 900 !important;
 }
 
 .leftText {
     cursor: pointer;
     font-size: small;
     font-weight: 500;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.75vh;
+    padding-bottom: 0.75vh;
+}
+
+.sub-menu {
+    font-weight: normal !important;
+    display: none;
+    position: absolute;
+    overflow: scroll;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.452);
+    width: 15em;
+    border-radius: 0px 0em 5px 5px;
+    margin-top: 0.42em;
+    margin-left: -0.5em;
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+.sub-menu ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.sub-menu-list li {
+    padding: 0.3em 0em 0.3em 1em;
+    text-align: start;
+}
+
+.sub-menu-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.sub-menu-list .disabled {
+    color: grey;
+}
+
+.sub-menu-list .disabled:hover {
+    background-color: transparent;
+    color: grey;
+    cursor: default !important;
+}
+
+.sub-menu-line::after {
+    content: "";
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    width: 150px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30%;
 }
 
 /* 오른쪽메뉴 */
 
 .videoIcon {
-    cursor: pointer;
     margin-top: 3px;
     width: 15px;
     margin-left: 7px;
@@ -166,7 +215,6 @@ body {
 }
 
 .batteryIcon {
-    cursor: pointer;
     margin-top: 3px;
     width: 15px;
     margin-left: 3px;
@@ -174,7 +222,6 @@ body {
 }
 
 .wifiIcon {
-    cursor: pointer;
     margin-top: 2px;
     width: 15px;
     margin-left: 7px;
@@ -182,7 +229,6 @@ body {
 }
 
 .searchIcon {
-    cursor: pointer;
     margin-top: 3px;
     width: 12px;
     margin-left: 7px;
@@ -190,7 +236,6 @@ body {
 }
 
 .ccIcon {
-    cursor: pointer;
     margin-top: 3px;
     width: 13px;
     margin-left: 7px;
@@ -198,7 +243,6 @@ body {
 }
 
 .siri {
-    cursor: pointer;
     margin-top: 3px;
     width: 15px;
     height: 15px;
@@ -206,7 +250,6 @@ body {
 }
 
 .dateTime {
-    cursor: pointer;
     font-size: small;
     font-weight: 500;
     margin-left: 20px;
@@ -243,7 +286,7 @@ body {
     height: 3rem;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
-    z-index: 2;        
+    z-index: 2;
 }
 
 .TopButton {
@@ -319,8 +362,13 @@ body {
     margin-top: 5px;
     width: 40px;
     transition: ease-out 0.3s;
+}
+
+#dock_ibook,
+#dock_git {
     cursor: pointer;
 }
+
 
 .hrLine {
     background-color: rgba(0, 0, 0, 0.288);
