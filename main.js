@@ -1,7 +1,7 @@
 // 처음 로딩시 post 창닫힘 상태로 만들기 
 $('#content, .post-container, .post-top').addClass('close-post')
-//로딩 창
 
+//로딩 창
 let myVar;
 
 function myFunction() {
