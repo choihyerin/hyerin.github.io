@@ -9,12 +9,15 @@
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-
+    <script>
+    </script>
 </head>
 
 <body onload="myFunction()" style="margin:0;">
+
     <!-- 로딩창 -->
     <div id="loader">
+
         <div class="loadingscreen">
             <div class="loading-logo-bar-wrapper">
                 <svg class="loading-logo" viewBox="0 0 1000 1187.198">
@@ -176,7 +179,7 @@
             </div>
 
             <!-- 오른쪽 메뉴 -->
-            <div class="navitem">
+            <div class="navitem" id="rightnav">
                 <div>
                     <img class="videoIcon" src="img/video-camera.png">
                 </div>
@@ -206,13 +209,30 @@
         <div class="post-container" id="mypost">
             <!-- 포스트 제목 -->
             <div class="post-top" id="mypostheader">
+              <!-- 포스트 버튼 -->
                 <div class="TopButton">
                     <span class="button-red"></span>
                     <span class="button-yellow"></span>
                     <span class="button-green"></span>
                 </div>
+                <!-- 포스트 주소창 포함 왼쪽 -->
+                <div class="searchaddress">
+                    <span class="prev active"><i class="fa fa-angle-left"></i></span>
+                    <span class="next"><i class="fa fa-angle-right"></i></span>
+                    <span class="set"><i class="fa fa-list-alt"></i></span>
+                    <span class="address">
+                        <input type="text" value="Hyerin's project diary" class="address"/ editable="true">
+                    </span>
+                </div>
+                <!-- 포스트 주소창 기준 오른쪽 -->
+                <div class="right">
+                    <span class="share"><i class="fa fa-share-alt"></i></span>
+                    <span class="tabs">
+                        <span class="square front"></span>
+                        <span class="square behind"></span>
+                    </span>
+                </div>
             </div>
-            
             <!-- 포스트 내용 -->
             <div id="content">
                 <div class="post-content">
@@ -234,15 +254,14 @@
                 <div class="dock-icon"><img class="dockIcon" src="img/maps.png"></div>
                 <div class="dock-icon"><img class="dockIcon" src="img/mail.png"></div>
                 <div class="dock-icon"><img class="dockIcon" src="img/setting.png"></div>
-                <div class="dock-icon">
-                    <img class="dockIcon" src="img/music.png"></div>
-                <div class="dock-icon">
-                    <img class="dockIcon" id="dock_ibook" src="img/ibook.png">
+                <div class="dock-icon"><img class="dockIcon" src="img/music.png"></div>
+                <div class="dock-icon"><img class="dockIcon" id="dock_ibook" src="img/ibook.png">
+                    <div class="active-icon"></div>
                 </div>
                 <div class="hrLine"></div>
                 <div class="dock-icon">
                     <a href="https://github.com">
-                        <img class="dockIcon" id="dock_git" src="img/folder.png">
+                        <img class="dockIcon" src="img/folder.png">
                     </a>
                 </div>
                 <div><img class="dockIcon" src="img/bin.png"></div>

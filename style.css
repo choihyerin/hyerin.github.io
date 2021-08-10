@@ -23,22 +23,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+/* 로딩창 로고 */
 .loading-logo-color {
     fill: #D8D8D8;
 }
-
+.loading-logo {
+    width: 80px;
+}
+/* 로딩창 로딩바 */
 .loading-logo-bar-wrapper {
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.loading-logo {
-    width: 80px;
-}
-
 .loading-bar {
     width: 180px;
     height: 6px;
@@ -80,10 +78,9 @@ body {
     100% {
         width: 100%;
     }
-
-
 }
 
+/* 로딩창 실행중에 다른 바디내용 안보이게 하기 */
 .animate-bottom {
     animation-name: animatebottom;
     animation-duration: 1s
@@ -106,7 +103,8 @@ body {
     text-align: center;
 }
 
-/*메뉴 전체 css*/
+
+/*네비메뉴 전체 css*/
 .top {
     display: flex;
     justify-content: space-between;
@@ -146,7 +144,7 @@ body {
     padding-top: 0.75vh;
     padding-bottom: 0.75vh;
 }
-
+/* 네비바에 텍스트 눌렀을떄 내여오는 서브 메뉴 설정 */
 .sub-menu {
     font-weight: normal !important;
     display: none;
@@ -197,6 +195,7 @@ body {
     border-radius: 30%;
 }
 
+
 /* 오른쪽메뉴 */
 
 .videoIcon {
@@ -210,11 +209,10 @@ body {
     font-size: xx-small;
     font-weight: 500;
     margin-left: 7px;
-
-
 }
 
 .batteryIcon {
+    cursor: pointer;
     margin-top: 3px;
     width: 15px;
     margin-left: 3px;
@@ -222,6 +220,7 @@ body {
 }
 
 .wifiIcon {
+    cursor: pointer;
     margin-top: 2px;
     width: 15px;
     margin-left: 7px;
@@ -229,6 +228,7 @@ body {
 }
 
 .searchIcon {
+    cursor: pointer;
     margin-top: 3px;
     width: 12px;
     margin-left: 7px;
@@ -236,6 +236,7 @@ body {
 }
 
 .ccIcon {
+    cursor: pointer;
     margin-top: 3px;
     width: 13px;
     margin-left: 7px;
@@ -243,6 +244,7 @@ body {
 }
 
 .siri {
+    cursor: pointer;
     margin-top: 3px;
     width: 15px;
     height: 15px;
@@ -250,14 +252,14 @@ body {
 }
 
 .dateTime {
+    cursor: pointer;
     font-size: small;
     font-weight: 500;
     margin-left: 20px;
     margin-right: 25px;
 }
 
-/* 윈도우창 */
-/* 윈도우 창 헤더부분 */
+/* 전체 포스트 css */
 .post-container {
     left: 25.9vh;
     top: 8.5vh;
@@ -274,6 +276,7 @@ body {
     position: absolute;
 }
 
+/* 윈도우 창 헤더부분 */
 #mypostheader {
     cursor: pointer;
 }
@@ -288,7 +291,7 @@ body {
     border-radius: 12px 12px 0 0;
     z-index: 2;
 }
-
+/* 포스트 헤더중 버튼 */
 .TopButton {
     width: 5rem;
     display: flex;
@@ -322,6 +325,105 @@ body {
     width: 1rem;
     height: 1rem;
 }
+/* 포스트 헤더중 주소창 포함 왼쪽 내용 */
+.searchaddress span {
+    display: inline-block;
+    background: #fbfbfb;
+    border-radius: 4px;
+    height: 23px;
+    padding: 0 8px;
+    cursor: pointer;
+    color: #b4b4b4;
+    border-bottom: 1px solid #cecece;
+    margin: auto;
+    vertical-align: center;
+}
+
+
+span.address {
+    width: 400px;
+    margin-left: 140px;
+    margin-right: 140px;
+    display: inline-block;
+    background: #fff;
+    line-height: 23px;
+    padding: 0;
+    text-align: center;
+}
+
+span.address>input {
+    font-size: 12px;
+    color: #505050;
+    border: none;
+    background: none;
+    text-align: center;
+    width: 300px;
+}
+
+.prev,
+.next,
+.set,
+.share,
+.tabs {
+    line-height: 23px;
+    vertical-align: middle;
+}
+/* 주소창 기준 오른쪽 내용 */
+.right {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    margin-left: 100px;
+}
+
+.right span {
+    display: inline-block;
+    background: #fbfbfb;
+    border-radius: 4px;
+    height: 23px;
+    padding: 0 8px;
+    cursor: pointer;
+    color: #b4b4b4;
+    border-bottom: 1px solid #cecece;
+}
+span.share {
+    margin-right: 7px;
+}
+
+span.share>i.fa {
+    font-size: 11px;
+    position: relative;
+}
+
+span.tabs {
+    position: relative;
+    width: 30px;
+    padding: 0;
+}
+
+span.tabs span {
+    height: 7px;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    position: absolute;
+    background: #fbfbfb;
+}
+
+span.tabs span.front {
+    top: 8px;
+    left: 6px;
+    z-index: 6;
+}
+
+span.tabs span.behind {
+    top: 6px;
+    left: 8px;
+    z-index: 5;
+}
+
+span.tabs:hover span {
+    border: 1px solid #666;
+}
 
 /* 윈도우 창 내용 */
 .post-content {
@@ -333,9 +435,36 @@ body {
 
 }
 
+/* 포스트 닫기 */
 .close-post {
     opacity: 0;
     pointer-events: none;
+}
+/* 독에서 열려잇는 창을 열엇을떄 포스트 흔들리게 */
+@keyframes postShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-12px);
+    }
+
+    40% {
+        transform: translateX(12px);
+    }
+
+    60% {
+        transform: translateX(-6px);
+    }
+
+    80% {
+        transform: translateX(6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* 독 메뉴 */
@@ -362,13 +491,8 @@ body {
     margin-top: 5px;
     width: 40px;
     transition: ease-out 0.3s;
-}
-
-#dock_ibook,
-#dock_git {
     cursor: pointer;
 }
-
 
 .hrLine {
     background-color: rgba(0, 0, 0, 0.288);
@@ -388,30 +512,4 @@ body {
 .dockIcon:hover {
     margin-top: -60px;
     width: 100px;
-}
-
-@keyframes postShake {
-    0% {
-        transform: translateX(0);
-    }
-
-    20% {
-        transform: translateX(-12px);
-    }
-
-    40% {
-        transform: translateX(12px);
-    }
-
-    60% {
-        transform: translateX(-6px);
-    }
-
-    80% {
-        transform: translateX(6px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
 }
